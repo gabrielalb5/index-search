@@ -9,9 +9,11 @@ A busca indexada assemelha-se à dicionários. O conceito é simples: as tabelas
 <img src="https://github.com/user-attachments/assets/d665a92b-7b13-4f8d-8d61-13bf7a3540f1" alt="índice de um livro de receitas" width=39%>
 <img src="https://github.com/user-attachments/assets/737535d9-0265-403b-a3c7-bd16dc5d083c" alt="rascunho do algoritmo de busca indexada" width=60%>
 
-<br>A tarefa principal desta atividade era implementar pelo menos uma tabela de índices para um arquivo ordenado com um milhão de registros. Para isso, optei por utilizar duas tabelas auxiliares: uma funcionando como índice da tabela original e outra como subíndice do índice.
-<br>Na primeira etapa, gerei um arquivo ordenado utilizando uma seed fixa e o dividi em mil índices, de forma que cada índice representava um intervalo de mil registros. Em seguida, subdividi esse índice em 100 partes, criando um subíndice em que cada entrada correspondia a um intervalo de 10 números.
-
+## Desenvolvimento 
+A tarefa principal desta atividade era implementar pelo menos uma tabela de índices para um arquivo ordenado com um milhão de registros. Para isso, optei por utilizar duas tabelas auxiliares: uma atuando como índice da tabela original e outra como subíndice do índice.
+<br>Na primeira etapa, gerei um arquivo ordenado utilizando uma seed fixa e o dividi em **mil índices**, de forma que cada índice representa um **intervalo de mil registros**. Em seguida, subdividi esse índice em **10 partes**, criando um **subíndice** em que cada entrada corresponde a um **intervalo de 100 números**. É importante ressaltar que a minha **tabela de registros** e os **índices** foram **implementados com matrizes**.
+<br><br>Após a separação e a leitura do número procurado, é iniciado o processo de busca. O algoritmo **começa pela menor tabela**, de 10 índices, procurando o intervalo que representa o espaço de 100 números que engloba o número buscado. O intervalo e os valores são armazenados em uma matriz chamada de ```inicioFim```. O processo se repete, dessa vez procurando o valor apenas no trecho indicado pela matriz ```inicioFim``` dentro do arquivo de mil índices. Ou seja, após refinar o intervalo pelo menor índice, **a busca será feita apenas em um intervalo de 100 índices dentro do outro índice de mil**, o que faz com que esse algoritmo seja muito eficiente.
+<br><br>A busca afunila ainda mais o trecho que contém o número procurado, retornando um outro intervalo, representado por dois índices, que aponta para um espaço de mil registros no arquivo original. No último passo, uma busca sequencial é aplicada e retorna o número encontrado e sua posição caso ele exista no registro. Para demonstrar a eficiência, também adicionei contadores de tempo de execução e comparei com um algoritmo de busca sequencial simples.
 
 
 
