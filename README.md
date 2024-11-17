@@ -1,4 +1,4 @@
-# 📋 Busca Indexada com dois índices<br>- Indexed Search with two indexes (C)
+# 📋 Busca Sequencial Indexada com dois índices<br>- Indexed Sequential Search with two indexes (C)
 
 ## Definição de busca
 Algoritmos de busca são métodos utilizados para **localizar registros dentro de uma coleção de dados**, sejam eles estruturados em tabelas, vetores, listas, intervalos numéricos, strings, entre outros. Eles desempenham um papel fundamental em diversas áreas da computação, garantindo que as informações sejam localizadas de forma eficiente. Cada algoritmo possui sua vantagem e melhor aplicação de acordo com o contexto. A busca sequencial, por exemplo, é a mais básica e mais didática para a introdução à programação, enquanto a busca binária se mostra mais eficiente, quando sabe-se ordenar o conjunto de elementos. Nessa atividade, implementei uma busca sequencial indexada.
