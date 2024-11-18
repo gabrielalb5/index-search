@@ -1,5 +1,7 @@
 # 📋 Busca Sequencial Indexada com dois índices<br>- Indexed Sequential Search with two indexes (C)
 
+O vídeo apresentação do código e da execução do programa está disponível no [YouTube](https://youtu.be/4nHoYfQRUYM?si=Io27demb5mjNZned).
+
 ## Definição de busca
 Algoritmos de busca são métodos utilizados para **localizar registros dentro de uma coleção de dados**, sejam eles estruturados em tabelas, vetores, listas, intervalos numéricos, strings, entre outros. Eles desempenham um papel fundamental em diversas áreas da computação, garantindo que as informações sejam localizadas de forma eficiente. Cada algoritmo possui sua vantagem e melhor aplicação de acordo com o contexto. A busca sequencial, por exemplo, é a mais básica e mais didática para a introdução à programação, enquanto a busca binária se mostra mais eficiente, quando sabe-se ordenar o conjunto de elementos. Nessa atividade, implementei uma busca sequencial indexada.
 
@@ -25,4 +27,5 @@ A tarefa principal desta atividade era implementar pelo menos uma tabela de índ
 | 4502731      | 0,000008               | 0,002699              | 5000000          | 0,000002               | 0,002459              |
 
 ## Conclusão
-
+A busca sequencial indexada se destaca como uma opção eficiente, especialmente por utilizar um recurso interessante: a divisão dos dados em tabelas auxiliares para facilitar a busca. Ela pode ser uma ótima escolha para quem já domina algoritmos de ordenação e trabalha com grandes volumes de dados ordenados. Entretanto, quando o conjunto de dados é constantemente alterado, seja em tamanho geral ou na redefinição dos índices, seu uso não é recomendado. Isso ocorre porque o código exige uma manutenção cuidadosa, sendo mais adequado para casos específicos e com menor frequência de alterações.
+<br><br>Durante os testes, também contabilizei o tempo de execução incluindo a divisão das tabelas auxiliares e observei um desempenho muito semelhante ao da busca sequencial simples. Porém, considerando que essa divisão é feita apenas uma vez e que o algoritmo será utilizado posteriormente para várias consultas, ele se torna, de fato, uma ótima opção para cenários de busca frequente.
